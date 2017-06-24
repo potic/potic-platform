@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+##############################################################################
+##
+##  Installs Travis CI CLI on the Ubuntu like box.
+##
+##############################################################################
+
+gem install travis -v 1.8.8 --no-rdoc --no-ri
+
+travis login --org --github-token $GITHUB_TOKEN
