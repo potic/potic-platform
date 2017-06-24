@@ -1,0 +1,3 @@
+= potic-platform
+
+Collection of platform scripts.
