@@ -12,5 +12,5 @@ git add .travis.yml
 git add deployment_keys.tar.enc
 git config --global user.email "yermilov17@gmail.com"
 git config --global user.name "Yaroslav Yermilov"
-git commit -m "#3. re-encrypt deployment keys"
+git commit -m "encrypt deployment keys"
 git push origin develop
