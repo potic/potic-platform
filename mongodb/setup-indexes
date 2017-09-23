@@ -1,0 +1,5 @@
+docker run -it --rm --link potic-mongodb:mongo mongo:3.4.9 mongo -u poticArticles -p <PASSWORD> --authenticationDatabase admin potic-mongodb/potic
+> db.article.getIndexes()
+> db.article.createIndex({ userId: 1 })
+> db.article.createIndex({ pocketId: 1 })
+> db.article.createIndex({ userId: 1, read: 1, timeAdded: 1, wordCount: 1 })

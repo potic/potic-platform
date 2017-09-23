@@ -1,0 +1,5 @@
+docker exec -it potic-mongodb mongo admin
+> db.createUser({ user: 'poticMongodbAdmin', pwd: '<PASSWORD>', roles: [ { role: "userAdminAnyDatabase", db: "admin" } ] });
+
+docker run -it --rm --link potic-mongodb:mongo mongo:3.4.9 mongo -u poticMongodbAdmin -p <PASSWORD> --authenticationDatabase admin potic-mongodb/admin
+> db.createUser({ user: 'poticMongodbRoot', pwd: '<PASSWORD>', roles: [ { role: "root", db: "admin" } ] });
