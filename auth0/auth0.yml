@@ -11,7 +11,7 @@ clients:
     type: 'Non Interactive Client'
     connections:
       social:
-        - 'google-oauth2'    
+        - 'google-oauth2'
 apis:
   name: 'potic-api'
   identifier: 'potic-api'
@@ -23,7 +23,10 @@ apis:
       name: 'update:articles'
       description: 'update user personal articles'
 connections:
-  - google
+  - 0:
+    name: google
+    clientId: "***"
+    clientSecret: "***"
 users:
   - 0:
     name: 'Yaroslav Yermilov'
@@ -49,4 +52,3 @@ rules:
                 });
             }
     '
-
