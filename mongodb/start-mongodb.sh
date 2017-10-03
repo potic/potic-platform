@@ -20,7 +20,7 @@ warn "Pulling latest docker image..."
 docker pull mongo:3.4.9
 
 warn "Starting docker image..."
-docker run --name potic-mongodb -v /data/mongodb:/data/db -d mongo:3.4.9 --auth
+docker run --name potic-mongodb -v /data/mongodb:/data/db -p 27017:27017 -d mongo:3.4.9 --auth
 
 warn "Currently running docker images"
 docker ps -a
