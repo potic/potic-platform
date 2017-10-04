@@ -27,28 +27,3 @@ connections:
     name: google
     clientId: "***"
     clientSecret: "***"
-users:
-  - 0:
-    name: 'Yaroslav Yermilov'
-    user_metadata: '{ "pocketSquareId": "58b1800bc9e77c0001d1d701" }'
-  - 1:
-    name: 'Vlad Grytsun'
-    user_metadata: '{ "pocketSquareId": "58b1800dc9e77c0001d1d702" }'
-rules:
-  - 0:
-    description: 'Add pocketSquareId attribute to the user'
-    code: '
-            function (user, context, callback) {
-              user.user_metadata = user.user_metadata || {};
-              // user.user_metadata.pocketSquareId = user.user_metadata.pocketSquareId || 'blue';
-              context.idToken['https://potic.me/pocketSquareId'] = user.user_metadata.pocketSquareId;
-
-              auth0.users.updateUserMetadata(user.user_id, user.user_metadata)
-                .then(function(){
-                    callback(null, user, context);
-                })
-                .catch(function(err){
-                    callback(err);
-                });
-            }
-    '
