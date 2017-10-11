@@ -1,5 +1,5 @@
 docker run -it --rm --link potic-mongodb:mongo mongo:3.4.9 mongo -u poticMongodbAdmin -p <PASSWORD> --authenticationDatabase admin potic-mongodb/admin
 > db.createUser({ user: 'poticArticles', pwd: '<PASSWORD>', roles: [ { role: "readWriteAnyDatabase", db: "admin" } ] });
-> db.createUser({ user: 'poticIngest', pwd: '<PASSWORD>', roles: [ { role: "readWriteAnyDatabase", db: "admin" } ] });
 > db.createUser({ user: 'poticUsers', pwd: '<PASSWORD>', roles: [ { role: "readWriteAnyDatabase", db: "admin" } ] });
+
 > db.createUser({ user: '<SERVICE_NAME>', pwd: '<PASSWORD>', roles: [ { role: "readWriteAnyDatabase", db: "admin" } ] });
