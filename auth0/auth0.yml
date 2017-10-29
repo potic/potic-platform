@@ -3,6 +3,7 @@ clients:
     name: 'potic.me'
     type: 'Single Page Application'
     allowedCallbacks: 'http://localhost:8000/callback, http://185.14.185.186/callback, http://46.101.62.243/callback'
+    jwtExpiration: 1209600, # 14 days in seconds
     connections:
       social:
         - 'google-oauth2'
