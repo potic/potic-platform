@@ -2,7 +2,7 @@ clients:
   - 0:
     name: 'potic.me'
     type: 'Single Page Application'
-    allowedCallbacks: 'http://localhost:8000/callback, http://185.14.185.186/callback, http://46.101.62.243/callback'
+    allowedCallbacks: 'http://localhost:8000/callback, http://185.14.185.186/callback, http://46.101.62.243/callback', http://localhost:40407, http://185.14.185.186:40407, http://46.101.62.243:40407
     jwtExpiration: 1209600, # 14 days in seconds
     connections:
       social:
