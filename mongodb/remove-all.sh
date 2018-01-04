@@ -17,7 +17,7 @@ warn "Killing currently running docker image..."
 docker kill potic-mongodb; docker rm potic-mongodb
 
 warn "Remove all MongoDB data..."
-rm -rf /data/mongodb
+rm -rf /mnt/data/mongodb
 
 warn "Currently running docker images"
 docker ps -a
